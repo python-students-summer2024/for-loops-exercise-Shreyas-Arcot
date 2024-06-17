@@ -11,9 +11,7 @@ from virus_transmission import calculate_infections
 starting_infections = 2
 reproduction_rate = 1.1
 num_days = 62
-total_infections = calculate_infections(
-    starting_infections, reproduction_rate, num_days
-)  # calculate total infections
+total_infections = calculate_infections(starting_infections, reproduction_rate, num_days)  # calculate total infections
 print(
     "{} people will go on to create a total of {} infections over {} days, assuming a reproduction rate of {}".format(
         starting_infections, total_infections, num_days, reproduction_rate
@@ -24,6 +22,7 @@ print(
 # #### NUMBER GUESSING ####
 # ask the user to guess a number between 1 and 10... give them 5 attempts
 from number_guessing import guess_number
+
 
 if guess_number(1, 10, 5):
     print("You guessed correctly!")  # they guessed correctly!
@@ -36,7 +35,8 @@ else:
 from loopy_turtles import create_turtle, draw_square, draw_star
 
 t = create_turtle("red", "yellow")  # create a turtle object
-for x in range(-200, 0, 25):  # loop four times
+for x in range(-100, 0, 25):  # loop four times
     draw_square(t, x, x, 100, "left", "#F5DEB3")  # draw a square
 
-draw_star(t, 200, 200, 100, 120, "right", "red")  # draw a five-pointed star
+
+draw_star(t, 200, 200, 100, 120, "left", "red")  # draw a five-pointed star
